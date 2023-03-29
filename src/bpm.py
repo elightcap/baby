@@ -14,6 +14,9 @@ def getBpm():
     request = requests.get(url=URI, HEADERS=hassheaders)
     mJson = request.json
     bpm = mJson["state"]
-
+    try:
+        os.remove(OUTFILE)
+    except OSError:
+        pass
     with open(OUTFILE, 'w') as f:
         f.write(bpm)
