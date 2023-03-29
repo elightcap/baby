@@ -6,3 +6,5 @@ services:
     build: ./
     image: babymon:latest
     restart: unless-stopped
+    volumes:
+      - ./src/files:/usr/src/app/src/files
