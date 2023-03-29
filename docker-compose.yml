@@ -1,0 +1,8 @@
+version: "3.7"
+
+services:
+  babymon:
+    container_name: babymon
+    build: ./
+    image: babymon:latest
+    restart: unless-stopped
