@@ -1,6 +1,6 @@
 import sched
-import requests
 import os
+import time
 from src.bpm import getBpm
 
 s = sched.scheduler(time.time, time.sleep)
